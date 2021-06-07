@@ -1,0 +1,17 @@
+@import "../../assets/scss/variables.scss";
+button {
+  height: 40px;
+  color: $white;
+  border: 1px solid $white;
+  @extend %flex-center;
+  align-self: center;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+button:hover {
+  background: $yellow-2;
+  border-color: $yellow-2;
+}

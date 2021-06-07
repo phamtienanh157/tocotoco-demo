@@ -1,9 +1,15 @@
 $white: #ffffff;
 $black: #000000;
 $yellow: #d3b673;
+$yellow-2: #d2a451;
 
 %flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@font-face {
+  font-family: "OpenSans Extra";
+  src: url(../../assets/fonts/OpenSans-ExtraBold.ttf);
 }
