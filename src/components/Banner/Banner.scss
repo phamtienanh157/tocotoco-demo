@@ -1,0 +1,13 @@
+.banner__container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  .banner__text {
+    max-width: 420px;
+    text-align: center;
+    .description {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}
