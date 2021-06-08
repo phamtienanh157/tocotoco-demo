@@ -11,14 +11,14 @@ export default function Navbar() {
           </li>
           <li className="menu--item">
             <a href="/#">Giới thiệu</a>
-            <i class="fa fa-angle-down"></i>
+            <i className="fa fa-angle-down"></i>
           </li>
           <li className="menu--item">
             <a href="/#">Sản phẩm</a>
           </li>
           <li className="menu--item">
             <a href="/#">Tin tức</a>
-            <i class="fa fa-angle-down"></i>
+            <i className="fa fa-angle-down"></i>
           </li>
           <li className="menu--item">
             <a href="/#">Cửa hàng</a>
@@ -32,7 +32,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="right">
-        <i class="fa fa-search"></i>
+        <i className="fa fa-search"></i>
       </div>
     </nav>
   );

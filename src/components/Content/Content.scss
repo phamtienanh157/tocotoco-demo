@@ -22,4 +22,16 @@
       margin: auto;
     }
   }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .button {
+    margin-top: 16px;
+    text-align: center;
+    &--yellow {
+      padding: 8px 16px;
+    }
+  }
 }

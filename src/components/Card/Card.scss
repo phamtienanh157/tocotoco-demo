@@ -4,6 +4,9 @@
   height: auto;
   position: relative;
   overflow: hidden;
+  box-shadow: 0px 2px 1.5px 0px $gray-2;
+  border-top: 1px solid $gray-4;
+  margin: 0 15px 32px;
   .tag {
     position: absolute;
     top: 0;
@@ -32,18 +35,39 @@
     top: 42px;
     transition: 0.2s;
     .name {
-      margin-top: 18px;
+      margin: 18px 0 0 0;
       font-weight: 700;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       padding: 0 8px;
-      font-size: 17px;
+      font-size: 16px;
     }
-    .price {
-      font-size: 15px;
-      font-weight: 700;
-      color: $brown;
+    .price--group {
+      display: flex;
+      justify-content: center;
+      .price {
+        margin: 24px 0 0 0;
+        font-size: 15px;
+        font-weight: 700;
+        color: $brown;
+      }
+      .discount {
+        margin: 24px 0 0 8px;
+        color: $gray-3;
+        transform: scale(0.9, 0.9);
+        text-decoration: line-through;
+      }
+    }
+    .button {
+      height: 33px;
+      margin-top: 16px;
+      margin-bottom: 12px;
+      padding: 5px;
+      &--yellow {
+        padding: 3px 16px;
+        font-weight: 100;
+      }
     }
   }
   &:hover {
