@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { Switch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { PATH } from "../constants/paths";
 const Home = lazy(() => import("../pages/Home"));
 
