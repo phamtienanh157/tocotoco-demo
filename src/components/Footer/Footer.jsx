@@ -1,6 +1,6 @@
 import logo from "../../assets/images/ft_logo.png";
-import googleplay from "../../assets/images/googleplay.png";
-import appstore from "../../assets/images/appstore.png";
+import google_play from "../../assets/images/googleplay.png";
+import app_store from "../../assets/images/appstore.png";
 import tick from "../../assets/images/tick.png";
 import "./Footer.scss";
 export default function Footer() {
@@ -50,10 +50,10 @@ export default function Footer() {
           </div>
           <div className="box__line download">
             <a href="/#">
-              <img src={googleplay} alt="google-play" />
+              <img src={google_play} alt="google-play" />
             </a>
             <a href="/#">
-              <img src={appstore} alt="app-store" />
+              <img src={app_store} alt="app-store" />
             </a>
             <a href="/#">
               <img src={tick} alt="tick" />

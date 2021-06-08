@@ -1,6 +1,10 @@
+import PropTypes from "prop-types";
 import Button from "../Button/Button";
 import "./Card.scss";
 
+Card.prototype = {
+  card: PropTypes.object,
+};
 export default function Card(props) {
   const { card } = props;
   return (
