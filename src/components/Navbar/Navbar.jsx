@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="left">
         <img src={logo} alt="logo" />
         <ul className="menu">
-          <li className="menu--item">
+          <li className="menu--item active">
             <a href="/#">Trang chủ</a>
           </li>
           <li className="menu--item">
