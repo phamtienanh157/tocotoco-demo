@@ -1,16 +1,16 @@
 import React, { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 import { PATH } from "../constants/paths";
-const Home = lazy(() => import("../pages/Home"));
+const Order = lazy(() => import("../pages/Order"));
 
-export default function HomeRoutes() {
+export default function OrderRoutes() {
   return (
     <Switch>
       <Route
-        path={PATH.HOME}
+        path={PATH.ORDER}
         component={() => (
           <Suspense fallback={<div>Loading...</div>}>
-            <Home />
+            <Order />
           </Suspense>
         )}
       />

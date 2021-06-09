@@ -4,11 +4,14 @@ import "./Card.scss";
 
 Card.prototype = {
   card: PropTypes.object,
+  className: PropTypes.string,
+  value: PropTypes.string,
+  onClick: PropTypes.func,
 };
 export default function Card(props) {
-  const { card } = props;
+  const { card, className, value, onClick } = props;
   return (
-    <div className="item">
+    <div className={`item ${className}`}>
       <div className="tag">new</div>
       <img src={card.image} alt="img" />
       <div className="detail">
@@ -18,7 +21,7 @@ export default function Card(props) {
           <p className="discount">{card.discount}</p>
         </div>
         <div className="button">
-          <Button value="ĐẶT HÀNG" className="button--yellow" />
+          <Button value={value} className="button--yellow" onClick={onClick} />
         </div>
       </div>
     </div>

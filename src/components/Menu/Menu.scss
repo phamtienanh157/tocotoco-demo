@@ -1,0 +1,73 @@
+@import "../../assets/scss/variables.scss";
+.menu {
+  margin: auto;
+  width: 45%;
+  height: auto;
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+      width: 25%;
+      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      .tag {
+        display: none;
+      }
+      .detail {
+        top: 0;
+        background: none;
+        .name {
+          font-size: 14px;
+          white-space: pre-wrap;
+          text-align: start;
+          padding: 0;
+          height: 40px;
+          line-height: 1rem;
+        }
+        .price--group {
+          justify-content: start;
+          align-items: center;
+          .price {
+            margin: 0 8px 0 0;
+            font-size: 14px;
+          }
+          .discount {
+            font-size: 13px;
+            margin: 0;
+          }
+        }
+        .button {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: 20px;
+          width: 20px;
+          margin: 0;
+          padding: 0;
+          &--yellow {
+            position: relative;
+            top: 0;
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            font-weight: 100;
+            background: $blue;
+            border: none;
+            font-size: 24px;
+            font-weight: bolder;
+            @extend %flex-center;
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      img {
+        transform: none;
+      }
+    }
+  }
+}

@@ -28,7 +28,7 @@ export default function Content() {
       <Title title="ToCoToCo Menu" subtitle="SẢN PHẨM NỔI BẬT" />
       <section className="menu">
         {cards.map((card) => (
-          <Card card={card} />
+          <Card key={card.id} card={card} value="ĐẶT HÀNG" />
         ))}
       </section>
       <div className="button">

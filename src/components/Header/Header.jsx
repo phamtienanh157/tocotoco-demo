@@ -1,7 +1,13 @@
+import { useHistory } from "react-router";
+import { PATH } from "../../constants/paths";
 import Navbar from "../Navbar/Navbar";
 import Button from "../Button/Button";
 import "./Header.scss";
 export default function Header() {
+  const history = useHistory();
+  const handleOnClick = () => {
+    history.push(PATH.ORDER);
+  };
   return (
     <header>
       <Navbar />
@@ -19,7 +25,11 @@ export default function Header() {
         </p>
       </section>
       <div className="button">
-        <Button value="Đặt hàng ngay" className="button--white" />
+        <Button
+          value="Đặt hàng ngay"
+          className="button--white"
+          onClick={handleOnClick}
+        />
       </div>
       <div className="scroll"></div>
       <p className="text normal">Cuộn xuống</p>
