@@ -1,14 +1,14 @@
-import { useHistory } from "react-router-dom";
-import { PATH } from "../../constants/paths";
+import PropTypes from "prop-types";
 import Navbar from "../Navbar/Navbar";
 import Button from "../Button/Button";
 import "./Header.scss";
-export default function Header() {
-  const history = useHistory();
-  const goOrderPage = () => {
-    history.push(PATH.ORDER);
-    window.location.reload();
-  };
+
+Header.prototype = {
+  goOrderPage: PropTypes.func,
+};
+export default function Header(props) {
+  const { goOrderPage } = props;
+
   return (
     <header>
       <Navbar />

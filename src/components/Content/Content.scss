@@ -36,3 +36,26 @@
     }
   }
 }
+@media screen and (max-width: 786px) {
+  .content {
+    .banner {
+      padding: 40px 10%;
+      &__about-us .banner__text {
+        position: unset;
+        margin-right: 40px;
+        transform: unset;
+        margin: 30px auto;
+      }
+      &__franchise {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        border: solid 6px $yellow;
+        .banner__text {
+          max-width: 460px;
+        }
+      }
+    }
+  }
+}

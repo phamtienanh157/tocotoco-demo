@@ -38,7 +38,9 @@ export default function Menu() {
       <header>
         <img src={logo} alt="logo" onClick={returnHome} />
         <input type="text" placeholder="Tìm kiếm sản phẩm" />
-        <button>Đăng nhập</button>
+        <button onClick={() => alert("Tinh nang nay hien chua co")}>
+          Đăng nhập
+        </button>
       </header>
       <div className="row d-flex justify-content-center">
         <section className="menu">
