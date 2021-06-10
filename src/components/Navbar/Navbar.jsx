@@ -14,7 +14,7 @@ export default function Navbar() {
             <i className="fa fa-angle-down"></i>
           </li>
           <li className="menu--item">
-            <a href="/order">Sản phẩm</a>
+            <a href="/#">Sản phẩm</a>
           </li>
           <li className="menu--item">
             <a href="/#">Tin tức</a>

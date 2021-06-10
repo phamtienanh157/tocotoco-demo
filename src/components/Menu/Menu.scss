@@ -44,7 +44,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     .card {
-      width: 157px;
+      width: 170px;
       box-shadow: 0 2px 7px 0 $shadow;
       padding: 15px;
       .tag {
@@ -63,7 +63,6 @@ header {
         }
         .price--group {
           justify-content: start;
-          align-items: center;
           .price {
             margin: 0 8px 0 0;
             font-size: 14px;
@@ -128,6 +127,7 @@ header {
       font-weight: 600;
     }
     :last-child {
+      cursor: pointer;
       font-size: 12px;
     }
   }

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 import { PATH } from "../constants/paths";
 const Order = lazy(() => import("../pages/Order"));

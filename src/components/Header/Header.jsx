@@ -1,12 +1,13 @@
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 import { PATH } from "../../constants/paths";
 import Navbar from "../Navbar/Navbar";
 import Button from "../Button/Button";
 import "./Header.scss";
 export default function Header() {
   const history = useHistory();
-  const handleOnClick = () => {
+  const goOrderPage = () => {
     history.push(PATH.ORDER);
+    window.location.reload();
   };
   return (
     <header>
@@ -28,7 +29,7 @@ export default function Header() {
         <Button
           value="Đặt hàng ngay"
           className="button--white"
-          onClick={handleOnClick}
+          onClick={goOrderPage}
         />
       </div>
       <div className="scroll"></div>

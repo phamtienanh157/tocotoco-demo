@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 import { getCardsApi } from "../../apis/cards.api.js";
 import { PATH } from "../../constants/paths";
 import Card from "../Card/Card";
@@ -9,6 +9,7 @@ import "./Menu.scss";
 export default function Menu() {
   const [cards, setCards] = useState([]);
   const history = useHistory();
+
   const getData = () => {
     getCardsApi()
       .then((res) => {
@@ -21,7 +22,10 @@ export default function Menu() {
     getData();
   }, []);
 
-  const returnHome = () => history.push(PATH.HOME);
+  const returnHome = () => {
+    history.push(PATH.HOME);
+    window.location.reload();
+  };
   return (
     <div>
       <header>
