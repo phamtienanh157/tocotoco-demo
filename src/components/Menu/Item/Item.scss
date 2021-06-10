@@ -1,0 +1,103 @@
+@import "../../../assets/scss/variables.scss";
+.item {
+  width: 170px;
+  box-shadow: 0 2px 7px 0 $shadow;
+  padding: 15px;
+  margin: 0 12px 15px 0;
+  .detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    .name {
+      margin: 18px 0 0 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1rem;
+      height: 40px;
+    }
+    .price--group {
+      display: flex;
+      align-items: center;
+      .price {
+        margin: 0 8px 0 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: $brown;
+      }
+      .discount {
+        font-size: 12px;
+        margin: 0;
+        color: $gray-3;
+        text-decoration: line-through;
+      }
+    }
+    .button--plus {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      color: $white;
+      background: $blue;
+      border: none;
+      font-size: 23px;
+      font-weight: 600;
+      @extend %flex-center;
+    }
+  }
+}
+.modal {
+  &-dialog {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+  }
+  &-content {
+    width: 650px;
+    padding: 15px;
+    img {
+      width: 180px;
+      border-radius: 5px;
+      margin: 0 20px 0 0;
+    }
+    .left {
+      display: flex;
+      align-items: flex-start;
+      .name {
+        font-size: 17px;
+        font-weight: 800;
+        height: fit-content;
+      }
+      button.button--plus {
+        position: relative;
+      }
+      .total {
+        border-radius: 30px;
+        font-size: 14px;
+        background: $yellow-3;
+        border: none;
+        color: $white;
+        padding: 5px 25px;
+      }
+    }
+    input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+// @media only screen and (max-width: 768px) {
+//   .item {
+//     width: 42%;
+//     .detail {
+//       top: 0;
+//     }
+//   }
+// }
+// @media only screen and (max-width: 375px) {
+//   .item {
+//     width: 88%;
+//   }
+// }

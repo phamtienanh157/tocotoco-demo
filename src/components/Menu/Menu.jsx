@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { getCardsApi } from "../../apis/cards.api.js";
 import { PATH } from "../../constants/paths";
-import Card from "../Card/Card";
+import Item from "./Item/Item";
 import tea from "../../assets/images/icon-glass-tea.png";
 import logo from "../../assets/images/logo.png";
 import "./Menu.scss";
 export default function Menu() {
   const [cards, setCards] = useState([]);
+  const [item, setItem] = useState({});
+
   const history = useHistory();
 
   const getData = () => {
@@ -26,6 +28,11 @@ export default function Menu() {
     history.push(PATH.HOME);
     window.location.reload();
   };
+  const getIndex = (item) => {
+    const list = [...cards];
+    const index = list.indexOf(item);
+    setItem(list[index]);
+  };
   return (
     <div>
       <header>
@@ -38,7 +45,7 @@ export default function Menu() {
           <p>Món nổi bật</p>
           <div className="content">
             {cards.map((card) => (
-              <Card key={card.id} card={card} className="card" value="+" />
+              <Item key={card.id} card={card} item={item} onClick={getIndex} />
             ))}
           </div>
         </section>
