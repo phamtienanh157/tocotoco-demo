@@ -17,8 +17,10 @@ export default function Card(props) {
       <div className="detail">
         <p className="name">{card.name}</p>
         <div className="price--group">
-          <p className="price">{card.price}</p>
-          <p className="discount">{card.discount}</p>
+          <p className="price">{card.price}đ</p>
+          {card.discount !== null && (
+            <p className="discount">{card.discount}đ</p>
+          )}
         </div>
         <div className="button">
           <Button value={value} className="button--yellow" onClick={onClick} />
