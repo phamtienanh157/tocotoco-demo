@@ -5,6 +5,8 @@ import { useHistory } from "react-router-dom";
 import { PATH } from "../constants/paths";
 export default function Home() {
   const history = useHistory();
+
+  // go to Order Page
   const goOrderPage = () => {
     history.push(PATH.ORDER);
     window.location.reload();

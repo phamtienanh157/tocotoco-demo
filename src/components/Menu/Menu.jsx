@@ -90,6 +90,7 @@ export default function Menu() {
       setTotal((number - 1) * parseInt(item.price));
     }
   };
+
   // handle add topping and handle total price
   const handleAddTopping = (topping) => {
     const list = [...toppings];

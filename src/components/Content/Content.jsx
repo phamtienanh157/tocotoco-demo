@@ -16,8 +16,10 @@ Content.prototype = {
 export default function Content(props) {
   const { goOrderPage } = props;
 
+  // list card includes objects
   const [cards, setCards] = useState([]);
 
+  // get data from api
   const getData = () => {
     getCardsApi()
       .then((res) => {
