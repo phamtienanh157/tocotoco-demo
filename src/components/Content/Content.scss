@@ -47,13 +47,10 @@
         margin: 30px auto;
       }
       &__franchise {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-        align-items: center;
-        border: solid 6px $yellow;
-        .banner__text {
-          max-width: 460px;
+        padding: 35px;
+        margin-top: 40px;
+        img:first-child {
+          display: none;
         }
       }
     }

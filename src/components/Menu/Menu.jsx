@@ -65,7 +65,9 @@ export default function Menu() {
               <span>=</span>
               <span className="brown">0đ</span>
             </div>
-            <button>Thanh toán</button>
+            <button onClick={() => alert("Thanh toan thanh cong")}>
+              Thanh toán
+            </button>
           </div>
         </section>
       </div>

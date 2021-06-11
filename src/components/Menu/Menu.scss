@@ -7,11 +7,11 @@ header {
   justify-content: space-between;
   padding: 0 10px;
   img {
-    width: 160px;
+    width: 15%;
     cursor: pointer;
   }
   input {
-    width: 500px;
+    width: 40%;
     border: none;
     border-radius: 30px;
     background: $milk;
@@ -20,9 +20,10 @@ header {
     outline: none;
   }
   button {
+    width: 93px;
     height: 30px;
     border-radius: 30px;
-    font-size: 14px;
+    font-size: 13px;
     background: $yellow-3;
     border: none;
     padding: 0 10px;
@@ -33,7 +34,7 @@ header {
   background: $milk;
   padding-top: 20px;
   .menu {
-    width: 42%;
+    width: 50%;
     height: auto;
     p {
       font-size: 14px;
@@ -110,11 +111,16 @@ header {
 }
 
 @media only screen and (max-width: 768px) {
+  header {
+    input {
+      width: 50%;
+    }
+  }
   .row {
     display: flex;
     flex-direction: column;
     .menu {
-      width: 90%;
+      width: 100%;
       margin: auto;
     }
   }

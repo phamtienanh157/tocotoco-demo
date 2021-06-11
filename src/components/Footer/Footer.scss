@@ -21,7 +21,7 @@ footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 35px;
+    margin: 0 auto 35px;
     img {
       width: 260px;
       height: min-content;
@@ -95,6 +95,28 @@ footer {
     }
     :last-child {
       font-size: 14px;
+    }
+  }
+}
+@media screen and (max-width: 786px) {
+  footer {
+    height: 850px;
+    .main {
+      margin: 0 auto 200px;
+      img {
+        width: 40%;
+      }
+      .footer__box {
+        width: 40%;
+        .download img {
+          width: 70px;
+          height: 22px;
+        }
+      }
+    }
+    .bottom {
+      flex-direction: column;
+      text-align: center;
     }
   }
 }

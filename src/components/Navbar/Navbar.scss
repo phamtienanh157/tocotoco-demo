@@ -58,5 +58,33 @@ nav {
     color: $white;
     background-color: $yellow;
     font-size: 14px;
+    :last-child {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 786px) {
+  nav {
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 15px;
+    .left {
+      img {
+        transform: scale(0.6);
+      }
+      ul.menu {
+        display: none;
+      }
+    }
+    .right {
+      background: none;
+      :first-child {
+        display: none;
+      }
+      :last-child {
+        display: inline;
+        font-size: 25px;
+      }
+    }
   }
 }

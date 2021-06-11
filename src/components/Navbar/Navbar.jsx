@@ -33,6 +33,7 @@ export default function Navbar() {
       </div>
       <div className="right">
         <i className="fa fa-search"></i>
+        <i className="fa fa-bars"></i>
       </div>
     </nav>
   );

@@ -1,6 +1,6 @@
 @import "../../../assets/scss/variables.scss";
 .item {
-  width: 170px;
+  width: 31%;
   box-shadow: 0 2px 7px 0 $shadow;
   padding: 15px;
   margin: 0 12px 15px 0;
@@ -88,16 +88,8 @@
     }
   }
 }
-// @media only screen and (max-width: 768px) {
-//   .item {
-//     width: 42%;
-//     .detail {
-//       top: 0;
-//     }
-//   }
-// }
-// @media only screen and (max-width: 375px) {
-//   .item {
-//     width: 88%;
-//   }
-// }
+@media only screen and (max-width: 514px) {
+  .item {
+    width: 47%;
+  }
+}
