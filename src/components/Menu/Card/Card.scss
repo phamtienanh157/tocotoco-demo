@@ -33,6 +33,9 @@
     .brown {
       color: $brown;
     }
+    i {
+      cursor: pointer;
+    }
     .total {
       @extend %flex-center;
       justify-content: flex-start;

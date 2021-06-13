@@ -75,6 +75,12 @@ export default function Menu() {
     setItem(list[index]);
     setNumber(1);
     setTotal(parseInt(list[index].price));
+    // reset initial state input checked
+    const listTopping = [...toppings];
+    toppings.forEach((e) => {
+      e.state = false;
+    });
+    setToppings(listTopping);
   };
 
   // increase number of item when click "+"
@@ -119,8 +125,13 @@ export default function Menu() {
   const totalPrice = cart.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.total;
   }, 0);
+  //
   const handleDeleteAll = () => {
     setCart([]);
+  };
+  //
+  const handleDeleteItem = (id) => {
+    setCart(cart.filter((e) => e.id !== id));
   };
   return (
     <div>
@@ -157,6 +168,7 @@ export default function Menu() {
           totalNumber={totalNumber}
           totalPrice={totalPrice}
           handleDeleteAll={handleDeleteAll}
+          handleDeleteItem={handleDeleteItem}
         />
       </div>
     </div>

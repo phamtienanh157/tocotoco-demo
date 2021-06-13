@@ -89,7 +89,8 @@ export default function Item(props) {
                   >
                     <input
                       type="checkbox"
-                      onClick={() => handleAddTopping(topping)}
+                      onChange={() => handleAddTopping(topping)}
+                      checked={topping.state}
                     />
                     <p className="my-0 ms-3 fw-light">{topping.value}</p>
                     <p className="my-0 fw-light text-end ms-auto">

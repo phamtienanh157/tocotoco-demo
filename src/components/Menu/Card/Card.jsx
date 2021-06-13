@@ -7,9 +7,11 @@ Card.prototype = {
   totalPrice: PropTypes.number,
   totalNumber: PropTypes.number,
   handleDeleteAll: PropTypes.func,
+  handleDeleteItem: PropTypes.func,
 };
 export default function Card(props) {
-  const { cart, totalNumber, totalPrice, handleDeleteAll } = props;
+  const { cart, totalNumber, totalPrice, handleDeleteAll, handleDeleteItem } =
+    props;
 
   return (
     <section className="cart">
@@ -32,7 +34,10 @@ export default function Card(props) {
                   {item.price}đ x {item.number} = {item.total},000đ
                 </p>
               </div>
-              <i className="fa fa-close"></i>
+              <i
+                className="fa fa-close"
+                onClick={() => handleDeleteItem(item.id)}
+              ></i>
             </div>
           ))
         )}
