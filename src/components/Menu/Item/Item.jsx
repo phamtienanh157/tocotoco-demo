@@ -9,6 +9,7 @@ Item.prototype = {
   handleInc: PropTypes.func,
   handleDec: PropTypes.func,
   handleAddTopping: PropTypes.func,
+  handleAddToCart: PropTypes.func,
   total: PropTypes.string,
   number: PropTypes.number,
 };
@@ -21,6 +22,7 @@ export default function Item(props) {
     handleInc,
     handleDec,
     handleAddTopping,
+    handleAddToCart,
     total,
     number,
   } = props;
@@ -66,7 +68,13 @@ export default function Item(props) {
                       <button className="button--plus me-4" onClick={handleInc}>
                         +
                       </button>
-                      <button className="total">+ {total},000đ</button>
+                      <button
+                        className="total"
+                        data-bs-dismiss="modal"
+                        onClick={handleAddToCart}
+                      >
+                        + {total},000đ
+                      </button>
                     </div>
                   </div>
                 </div>

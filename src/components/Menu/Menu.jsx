@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { getCardsApi } from "../../apis/cards.api.js";
 import { PATH } from "../../constants/paths";
-import Item from "./Item/Item";
-import tea from "../../assets/images/icon-glass-tea.png";
 import logo from "../../assets/images/logo.png";
+import Item from "./Item/Item";
+import Card from "./Card/Card";
 import "./Menu.scss";
 export default function Menu() {
   // list item include many objects
@@ -90,7 +90,6 @@ export default function Menu() {
       setTotal((number - 1) * parseInt(item.price));
     }
   };
-
   // handle add topping and handle total price
   const handleAddTopping = (topping) => {
     const list = [...toppings];
@@ -100,6 +99,28 @@ export default function Menu() {
     else setTotal(total - parseInt(list[index].price));
     list[index].state = !list[index].state;
     setToppings(list);
+  };
+
+  const handleAddToCart = () => {
+    const list = [...cart];
+    const object = {
+      id: list.length + 1,
+      name: item.name,
+      price: item.price,
+      number: number,
+      total: total,
+    };
+    list.push(object);
+    setCart(list);
+  };
+  const totalNumber = cart.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.number;
+  }, 0);
+  const totalPrice = cart.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.total;
+  }, 0);
+  const handleDeleteAll = () => {
+    setCart([]);
   };
   return (
     <div>
@@ -124,31 +145,19 @@ export default function Menu() {
                 handleInc={handleInc}
                 handleDec={handleDec}
                 handleAddTopping={handleAddTopping}
+                handleAddToCart={handleAddToCart}
                 total={total}
                 number={number}
               />
             ))}
           </div>
         </section>
-        <section className="cart">
-          <div className="title">
-            <p>Giỏ hàng của tôi</p>
-            <p>Xóa tất cả</p>
-          </div>
-          <div className="content">
-            <p>Chưa có sản phẩm nào!</p>
-            <div className="total">
-              <img src={tea} alt="tea" />
-              <span>x</span>
-              <span className="brown">1</span>
-              <span>=</span>
-              <span className="brown">0đ</span>
-            </div>
-            <button onClick={() => alert("Thanh toan thanh cong")}>
-              Thanh toán
-            </button>
-          </div>
-        </section>
+        <Card
+          cart={cart}
+          totalNumber={totalNumber}
+          totalPrice={totalPrice}
+          handleDeleteAll={handleDeleteAll}
+        />
       </div>
     </div>
   );
