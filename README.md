@@ -1,6 +1,6 @@
 ## About
 
-- Soure Design [https://tocotocotea.com/](https://tocotocotea.com/)
+- Source Design [https://tocotocotea.com/](https://tocotocotea.com/)
 
 ## Features
 
