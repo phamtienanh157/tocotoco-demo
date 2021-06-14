@@ -9,7 +9,7 @@ export default function Home() {
   // go to Order Page
   const goOrderPage = () => {
     history.push(PATH.ORDER);
-    window.location.reload();
+    // window.location.reload();
   };
   return (
     <div>
