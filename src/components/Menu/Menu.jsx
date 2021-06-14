@@ -66,7 +66,7 @@ export default function Menu() {
   // return Home page
   const returnHome = () => {
     history.push(PATH.HOME);
-    // window.location.reload();
+    window.location.reload();
   };
 
   // get index of item in "cards" when click a item
