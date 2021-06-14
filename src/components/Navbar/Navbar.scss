@@ -6,6 +6,8 @@ nav {
   background: #282828;
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   box-shadow: 0px 4px 8px 0px $shadow-2;
   z-index: 3;
   animation: slide-down 0.5s;

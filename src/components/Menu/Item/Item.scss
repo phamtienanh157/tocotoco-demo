@@ -93,3 +93,8 @@
     width: 47%;
   }
 }
+@media only screen and (max-width: 400px) {
+  .item {
+    width: 90%;
+  }
+}

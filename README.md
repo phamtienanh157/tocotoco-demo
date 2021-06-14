@@ -2,7 +2,7 @@
 
 - Soure Design [https://tocotocotea.com/](https://tocotocotea.com/)
 
-## Feature
+## Features
 
 - Home page
   - get API
