@@ -4,12 +4,13 @@
 
 ## Features
 
+- UI : Home page + Order page
 - Home page
   - get API
 - Order page
   - get API
   - add to cart
-- Reponsive (Not completed)
+- Responsive
 
 ## Available Scripts
 
