@@ -7,27 +7,27 @@ export default function Navbar() {
         <img src={logo} alt="logo" />
         <ul className="menu">
           <li className="menu--item active">
-            <a href="/home">Trang chủ</a>
+            <a href="/">Trang chủ</a>
           </li>
           <li className="menu--item">
-            <a href="/home">Giới thiệu</a>
+            <a href="/">Giới thiệu</a>
             <i className="fa fa-angle-down"></i>
           </li>
           <li className="menu--item">
             <a href="/order">Sản phẩm</a>
           </li>
           <li className="menu--item">
-            <a href="/home">Tin tức</a>
+            <a href="/">Tin tức</a>
             <i className="fa fa-angle-down"></i>
           </li>
           <li className="menu--item">
-            <a href="/home">Cửa hàng</a>
+            <a href="/">Cửa hàng</a>
           </li>
           <li className="menu--item">
-            <a href="/home">Tuyển dụng</a>
+            <a href="/">Tuyển dụng</a>
           </li>
           <li className="menu--item">
-            <a href="/home">Nhượng quyền</a>
+            <a href="/">Nhượng quyền</a>
           </li>
         </ul>
       </div>

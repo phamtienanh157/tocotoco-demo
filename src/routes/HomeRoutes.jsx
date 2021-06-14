@@ -7,6 +7,7 @@ export default function HomeRoutes() {
   return (
     <Switch>
       <Route
+        exact
         path={PATH.HOME}
         component={() => (
           <Suspense fallback={<div>Loading...</div>}>

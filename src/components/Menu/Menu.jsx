@@ -6,6 +6,7 @@ import logo from "../../assets/images/logo.png";
 import Item from "./Item/Item";
 import Card from "./Card/Card";
 import "./Menu.scss";
+
 export default function Menu() {
   // list item include many objects
   const [cards, setCards] = useState([]);
@@ -106,7 +107,7 @@ export default function Menu() {
     list[index].state = !list[index].state;
     setToppings(list);
   };
-
+  // handle add order to cart
   const handleAddToCart = () => {
     const list = [...cart];
     const object = {
@@ -119,17 +120,19 @@ export default function Menu() {
     list.push(object);
     setCart(list);
   };
+  // handle total of item in cart
   const totalNumber = cart.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.number;
   }, 0);
+  // handle total price in cart
   const totalPrice = cart.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.total;
   }, 0);
-  //
+  // handle delete all item in cart
   const handleDeleteAll = () => {
     setCart([]);
   };
-  //
+  // handle delete 1 item in cart
   const handleDeleteItem = (id) => {
     setCart(cart.filter((e) => e.id !== id));
   };

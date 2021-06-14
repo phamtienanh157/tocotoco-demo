@@ -46,7 +46,10 @@ export default function Card(props) {
           <span>x</span>
           <span className="brown">{totalNumber}</span>
           <span>=</span>
-          <span className="brown">{totalPrice},000đ</span>
+          <span className="brown">
+            {totalPrice}
+            {totalPrice > 0 ? ",000đ" : "đ"}
+          </span>
         </div>
         <button onClick={() => alert("Thanh toan thanh cong")}>
           Thanh toán
