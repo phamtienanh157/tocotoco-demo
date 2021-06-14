@@ -120,3 +120,23 @@ footer {
     }
   }
 }
+@media screen and (max-width: 400px) {
+  footer {
+    .main {
+      img {
+        display: none;
+      }
+      img + .footer__box {
+        width: 80%;
+        margin: 0 0 10px 0;
+      }
+      .footer__box {
+        h4 {
+          margin-bottom: 20px;
+        }
+        width: 40%;
+        margin: 0;
+      }
+    }
+  }
+}
