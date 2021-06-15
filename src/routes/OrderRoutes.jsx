@@ -7,7 +7,6 @@ export default function OrderRoutes() {
   return (
     <Switch>
       <Route
-        exact
         path={PATH.ORDER}
         component={() => (
           <Suspense fallback={<div>Loading...</div>}>

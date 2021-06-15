@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 import { getCardsApi } from "../../apis/cards.api.js";
-import { PATH } from "../../constants/paths";
 import logo from "../../assets/images/logo.png";
 import Item from "./Item/Item";
 import Card from "./Card/Card";
 import "./Menu.scss";
 
-export default function Menu() {
+export default function Menu(props) {
+  const { returnHome } = props;
   // list item include many objects
   const [cards, setCards] = useState([]);
   // 1 object about 1 item
@@ -45,11 +44,6 @@ export default function Menu() {
   ]);
   // cart
   const [cart, setCart] = useState([]);
-  // console.log(item);
-  // console.log(number);
-  // console.log(total);
-  const history = useHistory();
-
   // get api and set data into "cards"
   const getData = () => {
     getCardsApi()
@@ -62,12 +56,6 @@ export default function Menu() {
   useEffect(() => {
     getData();
   }, []);
-
-  // return Home page
-  const returnHome = () => {
-    history.push(PATH.HOME);
-    window.location.reload();
-  };
 
   // get index of item in "cards" when click a item
   const getIndex = (item) => {
